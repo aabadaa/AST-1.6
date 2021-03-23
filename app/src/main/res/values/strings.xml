@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AST</string>
+    <string name="and">∧</string>
+    <string name="or">∨</string>
+    <string name="not">¬</string>
+    <string name="xor">⊕</string>
+    <string name="one_side">⇒</string>
+    <string name="two_side">⇔</string>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+
+
+    <EditText
+        android:id="@+id/input"
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:hint="p^q"
+        android:textIsSelectable="true"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.006"
+        tools:ignore="Deprecated,MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/and"
+        style="@style/operator_button"
+        android:layout_marginStart="16dp"
+        android:text="@string/and"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/not"
+        app:layout_constraintVertical_bias="0.06"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/or"
+        style="@style/operator_button"
+        android:layout_marginEnd="16dp"
+        android:text="@string/or"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/not"
+        app:layout_constraintVertical_bias="0.06"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/not"
+        style="@style/operator_button"
+        android:text="@string/not"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/or"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@+id/and"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintVertical_bias="0.032"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/xor"
+        style="@style/operator_button"
+        android:layout_marginStart="72dp"
+        android:text="@string/xor"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/one_side"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toEndOf="@+id/two_side"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintVertical_bias="0.455"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_side"
+        style="@style/operator_button"
+        android:layout_marginEnd="16dp"
+        android:text="@string/one_side"
+        app:layout_constraintBottom_toTopOf="@+id/s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/or"
+        app:layout_constraintVertical_bias="0.49"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/two_side"
+        style="@style/operator_button"
+        android:layout_marginStart="16dp"
+        android:text="@string/two_side"
+        app:layout_constraintBottom_toTopOf="@+id/q"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/and"
+        app:layout_constraintVertical_bias="0.49"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/q"
+        style="@style/operator_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="64dp"
+        android:text="q"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/clear"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/p"
+        style="@style/operator_button"
+        android:layout_marginBottom="52dp"
+        android:text="p"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/s"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@+id/q"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/s"
+        style="@style/operator_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:text="s"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/result"
+        style="@style/help_button"
+        android:layout_marginBottom="36dp"
+        android:text="result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/back"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/clear"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/help_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="60dp"
+        android:text="clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/back"
+        style="@style/help_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
